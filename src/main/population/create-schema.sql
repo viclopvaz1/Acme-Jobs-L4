@@ -1,4 +1,5 @@
-   create table `administrator` (
+
+    create table `administrator` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
@@ -193,8 +194,8 @@
         `username` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
-    
-        create table `worker` (
+
+    create table `worker` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
@@ -262,7 +263,7 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-       
+
     alter table `worker` 
        add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
        foreign key (`user_account_id`) 
