@@ -69,6 +69,9 @@
 
 			<acme:menu-suboption code="master.menu.authenticated.list-challenge" action="/authenticated/challenge/list" />
 			<acme:menu-separator />
+			
+			<acme:menu-suboption code="master.menu.authenticated.list-job" action="/authenticated/job/list" />
+
 
 		</acme:menu-option>
 
