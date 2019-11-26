@@ -100,6 +100,7 @@ master.menu.authenticated.list-announcement = List of announcements
 master.menu.authenticated.list-company-record = List of Companies
 master.menu.authenticated.list-investor-record = List Investor Record
 master.menu.authenticated.list-challenge= List of challenges
+master.menu.authenticated.list-job = List of Jobs
 
 # master.footer ###############################################################
 

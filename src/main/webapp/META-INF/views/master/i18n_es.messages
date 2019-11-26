@@ -106,6 +106,7 @@ master.menu.authenticated.list-announcement = Lista de anuncios
 master.menu.authenticated.list-company-record = Lista de Compañías
 master.menu.authenticated.list-investor-record =  Lista de Records
 master.menu.authenticated.list-challenge= Lista de Retos
+master.menu.authenticated.list-job = Lista de Trabajos
 
 ﻿# master.footer ###############################################################
 

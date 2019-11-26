@@ -226,6 +226,7 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
+
 create index IDX5moeha500qc8gc2o08r23r0u3 on `company_record` (`star`);
 create index IDXj49047yahjjtbpt7ttxtuc5k7 on `investor_record` (`star`);
 
@@ -254,7 +255,7 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        add constraint FK_6lnbc6fo3om54vugoh8icg78m 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
+       
     alter table `application` 
        add constraint `FKoa6p4s2oyy7tf80xwc4r04vh6` 
        foreign key (`job_id`) 
