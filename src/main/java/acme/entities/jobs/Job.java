@@ -1,5 +1,5 @@
 
-package acme.entities.job;
+package acme.entities.jobs;
 
 import java.util.Date;
 

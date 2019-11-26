@@ -79,11 +79,18 @@ master.menu.administrator.list-non-comercial-banner = Lista non comercial banner
 
 master.menu.provider = Proveedor
 master.menu.provider.create-request = Crear Solicitud
+master.menu.employer.list-job = Lista de Trabajos
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.create-offer = Crear Oferta
+#master.menu.consumer.create-offer = Crear Oferta
+
+# master.menu.employer ########################################################
+
+master.menu.employer = Empleador
+master.menu.employer.list-mine-job = Lista de Trabajos
+master.menu.employer.list-mine-application = Lista de Aplicaciones
 
 # master.menu.user-account ####################################################
 

@@ -73,6 +73,13 @@ master.menu.administrator.list-non-comercial-banner = List non comercial banner
 
 master.menu.provider = Provider
 master.menu.provider.create-request = Create Request
+#master.menu.employer.list-mine-job = List Jobs
+
+# master.menu.employer ########################################################
+
+master.menu.employer = Employer
+master.menu.employer.list-mine-job = List Jobs
+master.menu.employer.list-mine-application = List Applications
 
 # master.menu.consumer ##########################################################
 

@@ -16,6 +16,6 @@ import acme.framework.components.Command;
 
 public enum CustomCommand implements Command {
 
-	STARS
+	STARS, LIST_MINE
 
 }
