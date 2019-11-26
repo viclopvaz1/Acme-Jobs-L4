@@ -74,6 +74,9 @@ master.menu.administrator.comercial-banner = Crear Banner Comercial
 master.menu.administrator.create-non-comercial-banner = Crear non comercial banner
 master.menu.administrator.list-non-comercial-banner = Lista non comercial banner
 
+# master.menu.worker   ########################################################
+master.menu.worker = Worker
+master.menu.worker.application.list-mine = List her applications
 
 # master.menu.provider ########################################################
 
