@@ -128,7 +128,12 @@
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.create-request" action="/provider/request/create" />
 		</acme:menu-option>
-
+		
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
+			<acme:menu-suboption code="master.menu.employer.list-mine-job" action="/employer/job/list-mine"/>
+			<acme:menu-suboption code="master.menu.employer.list-mine-application" action="/employer/application/list-mine"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
