@@ -68,6 +68,9 @@ master.menu.administrator.comercial-banner = Create Comercial Banner
 master.menu.administrator.create-non-comercial-banner = Create non comercial banner
 master.menu.administrator.list-non-comercial-banner = List non comercial banner
 
+# master.menu.worker   ########################################################
+master.menu.worker = Trabajador
+master.menu.worker.application.list-mine = Listar sus applications
 
 # master.menu.provider ########################################################
 
@@ -104,6 +107,7 @@ master.menu.authenticated.list-announcement = List of announcements
 master.menu.authenticated.list-company-record = List of Companies
 master.menu.authenticated.list-investor-record = List Investor Record
 master.menu.authenticated.list-challenge= List of challenges
+master.menu.authenticated.list-job = List of Jobs
 
 # master.footer ###############################################################
 

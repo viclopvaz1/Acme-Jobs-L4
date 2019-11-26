@@ -69,6 +69,9 @@
 
 			<acme:menu-suboption code="master.menu.authenticated.list-challenge" action="/authenticated/challenge/list" />
 			<acme:menu-separator />
+			
+			<acme:menu-suboption code="master.menu.authenticated.list-job" action="/authenticated/job/list" />
+
 
 		</acme:menu-option>
 
@@ -113,6 +116,9 @@
 			<acme:menu-suboption code="master.menu.administrator.list-comercial-banner" action="/administrator/comercial-banner/list"/>
 			<acme:menu-suboption code="master.menu.administrator.comercial-banner" action="/administrator/comercial-banner/create" />
 
+		</acme:menu-option>
+	<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+			<acme:menu-suboption code="master.menu.worker.application.list-mine" action="/worker/application/list-mine" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
