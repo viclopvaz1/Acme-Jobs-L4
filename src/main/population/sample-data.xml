@@ -252,14 +252,15 @@
 	</bean>
 
 	<bean name="duty1" class="acme.entities.duties.Duty">
-		<property name="reference" value="EMP1-JOB1" />
 		<property name="title" value="Example1"/>
 		<property name="description" value="This is a 1st example"/>
 		<property name="percentage" value="0.5"/>
+		<property name="descriptor" ref="descriptor1" />
 	</bean>
 	
-	<bean name="description1" class="acme.entities.descriptors.Descriptor">
+	<bean name="descriptor1" class="acme.entities.descriptors.Descriptor">
 		<property name="description" value="Example Descriptor" />
+		<property name="job" ref="job1" />
 	</bean>
 	
 	<bean name="job1" class="acme.entities.jobs.Job">
@@ -296,7 +297,7 @@
 		<property name="status" value="rejected" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
-		<property name="job" ref="job1" />
+		<property name="job" ref="job2" />
 		<property name="worker" ref="worker2Worker" />
 	</bean>
 	
@@ -358,36 +359,6 @@
 	<bean name="worker1Authenticathed" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="worker1UserAccount" />
 	</bean>
-
-	<bean name="application1" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="EMP1-JOB1" />
-		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="accepted" />
-		<property name="skills" value="Mu bueno" />
-		<property name="qualifications" value="Universidad de la vida" />
-		<property name="job" ref="job1" />
-		<property name="worker" ref="worker1Worker" />
-	</bean>
-	
-	<bean name="application2" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="EMP1-JOB13" />
-		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="rejected" />
-		<property name="skills" value="Mu bueno" />
-		<property name="qualifications" value="Universidad de Sevilla" />
-		<property name="job" ref="job1" />
-		<property name="worker" ref="worker1Worker" />
-	</bean>
-	
-	<bean name="application3" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="EMP1-JOB134" />
-		<property name= "moment" value= "2019/11/18 10:00"/>
-		<property name="status" value="rejected" />
-		<property name="skills" value="Mu bueno" />
-		<property name="qualifications" value="Universidad de Sevilla" />
-		<property name="job" ref="job1" />
-		<property name="worker" ref="worker1Worker" />
-  </bean>
 
 	<bean name="worker2Worker" class="acme.entities.roles.Worker">
 		<property name="qualificationsRecord" value="qualification1" />

@@ -2,6 +2,7 @@
 package acme.features.job.application;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,13 +47,13 @@ public class JobApplicationListMineService implements AbstractListService<Employ
 	public Collection<Application> findMany(final Request<Application> request) {
 		assert request != null;
 
-		Collection<Application> result = null;
+		Collection<Application> result = new HashSet<>();
 		Principal principal;
 		Collection<Application> application;
 		Collection<Job> jobs;
 
 		principal = request.getPrincipal();
-		jobs = this.jobRepository.findManyByEmployerId(principal.getAccountId());
+		jobs = this.jobRepository.findManyByEmployerId(principal.getActiveRoleId());
 		for (Job j : jobs) {
 			application = this.repository.findManyByJobId(j.getId());
 			result.addAll(application);

@@ -1,13 +1,9 @@
 
 package acme.entities.roles;
 
-import java.util.Collection;
-
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 
-import acme.entities.jobs.Job;
 import acme.framework.entities.UserRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,6 +21,6 @@ public class Employer extends UserRole {
 	@NotBlank
 	private String				sector;
 
-	@OneToMany(mappedBy = "employer")
-	private Collection<Job>		jobs;
+	//	@OneToMany(mappedBy = "employer")
+	//	private Collection<Job>		jobs;
 }
