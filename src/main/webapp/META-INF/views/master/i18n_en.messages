@@ -69,8 +69,8 @@ master.menu.administrator.create-non-comercial-banner = Create non comercial ban
 master.menu.administrator.list-non-comercial-banner = List non comercial banner
 
 # master.menu.worker   ########################################################
-master.menu.worker = Trabajador
-master.menu.worker.application.list-mine = Listar sus applications
+master.menu.worker = Worker
+master.menu.worker.application.list-mine = List her applications
 
 # master.menu.provider ########################################################
 
