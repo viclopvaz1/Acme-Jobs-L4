@@ -10,13 +10,14 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Range;
 
 import acme.entities.descriptors.Descriptor;
+import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Setter
 @Getter
-public class Duty {
+public class Duty extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
