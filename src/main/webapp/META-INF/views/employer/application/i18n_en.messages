@@ -8,13 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-job.application.list.label.referenceNumber = Reference Number
-job.application.list.label.moment = Moment
+employer.application.list.label.referenceNumber = Reference Number
+employer.application.list.label.moment = Moment
 
-job.application.form.label.referenceNumber = Reference Number: 
-job.application.form.label.moment = Moment: 
-job.application.form.label.status = Status: 
-job.application.form.label.Skills = Skills: 
-job.application.form.label.qualification = Qualification: 
+employer.application.form.label.referenceNumber = Reference Number: 
+employer.application.form.label.moment = Moment: 
+employer.application.form.label.status = Status: 
+employer.application.form.label.skills = Skills: 
+employer.application.form.label.qualifications = Qualification: 
 
-job.application.form.button.return = Return
+employer.application.form.button.return = Return

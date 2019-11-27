@@ -297,7 +297,7 @@
 		<property name="status" value="rejected" />
 		<property name="skills" value="Mu bueno" />
 		<property name="qualifications" value="Universidad de Sevilla" />
-		<property name="job" ref="job1" />
+		<property name="job" ref="job2" />
 		<property name="worker" ref="worker2Worker" />
 	</bean>
 	
