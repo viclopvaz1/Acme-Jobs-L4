@@ -1,7 +1,10 @@
 
 package acme.features.authenticated.announcement;
 
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,14 +44,11 @@ public class AuthenticatedAnnouncementListService implements AbstractListService
 		assert request != null;
 
 		Collection<Announcement> result;
+		Calendar cal = new GregorianCalendar();
+		cal.add(Calendar.MONTH, -1);
+		Date moment = cal.getTime();
 
-		result = this.repository.findMany();
-
-		//		for (Announcement a : result) {
-		//			if (Calendar.MONTH - a.getMoment().getMonth() < 2 || Calendar.YEAR - a.getMoment().getYear() >= 1) {
-		//				result.remove(a);
-		//			}
-		//		}
+		result = this.repository.findManyByMoment(moment);
 
 		return result;
 	}

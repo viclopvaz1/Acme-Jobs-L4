@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.descriptors.Descriptor;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -44,10 +45,6 @@ public class Job extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	//	@NotNull
-	//	@OneToOne(optional = false)
-	//	private Descriptor			descriptor;
-
 	@NotBlank
 	private String				description;
 
@@ -65,9 +62,9 @@ public class Job extends DomainEntity {
 	@ManyToOne(optional = false)
 	private Employer			employer;
 
-	//	@NotNull
-	//	@Valid
-	//	@OneToMany(mappedBy = "job")
-	//	private Collection<Application>	application;
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Descriptor			descriptor;
 
 }
