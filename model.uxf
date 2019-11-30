@@ -114,9 +114,9 @@ NonComercialBanner
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1498</x>
-      <y>371</y>
-      <w>217</w>
+      <x>1484</x>
+      <y>490</y>
+      <w>287</w>
       <h>119</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
@@ -190,13 +190,13 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1302</x>
+      <x>1267</x>
       <y>231</y>
-      <w>70</w>
-      <h>77</h>
+      <w>105</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>130.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -246,13 +246,13 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1351</x>
+      <x>1316</x>
       <y>231</y>
-      <w>70</w>
-      <h>77</h>
+      <w>56</w>
+      <h>161</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+    <additional_attributes>60.0;10.0;10.0;210.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -338,12 +338,13 @@ bg=yellow</panel_attributes>
       <x>931</x>
       <y>224</y>
       <w>154</w>
-      <h>49</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 CustomCommand
 --
 +STARS
++LIST_MINE
 
 bg=orange</panel_attributes>
     <additional_attributes/>
@@ -351,9 +352,9 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1204</x>
-      <y>294</y>
-      <w>140</w>
+      <x>1148</x>
+      <y>308</y>
+      <w>161</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
@@ -366,9 +367,9 @@ Provider
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1365</x>
-      <y>294</y>
-      <w>147</w>
+      <x>1267</x>
+      <y>378</y>
+      <w>161</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
@@ -471,18 +472,21 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>294</y>
-      <w>189</w>
-      <h>77</h>
+      <x>1589</x>
+      <y>707</y>
+      <w>357</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-InvestorRecord
+Application
 --
-+investor {NotBlank}
-+sector {NotBlank}
-+statement {NotBlank}
-+starts {Range(min=1, max=5),NotNull}</panel_attributes>
++referenceNumber: String {Column(unique = true), NotBlank}
++moment: Date {Temporal(TemporalType.TIMESTAMP), NotNull, Past}
++status: String {NotBlank}
++skills: String {NotBlank}
++qualifications: String {NotBlank}
++worker: Worker {NotNull, Valid, ManyToOne(optional = false)}
++job: Job {NotNull, Valid, ManyToOne(optional = false)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -666,7 +670,7 @@ Use</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1596</x>
+      <x>1876</x>
       <y>518</y>
       <w>238</w>
       <h>63</h>
@@ -682,7 +686,7 @@ AnonymousCompanyRecordRepository
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1883</x>
+      <x>2352</x>
       <y>518</y>
       <w>385</w>
       <h>63</h>
@@ -698,7 +702,7 @@ AnonymousCompanyRecordShowService
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1967</x>
+      <x>2030</x>
       <y>623</y>
       <w>378</w>
       <h>70</h>
@@ -714,7 +718,7 @@ AnonymousCompanyRecordListService
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1575</x>
+      <x>1638</x>
       <y>623</y>
       <w>378</w>
       <h>70</h>
@@ -730,8 +734,8 @@ AnonymousCompanyRecordListTopsService
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2023</x>
-      <y>427</y>
+      <x>2492</x>
+      <y>406</y>
       <w>196</w>
       <h>49</h>
     </coordinates>
@@ -744,56 +748,56 @@ AnonymousCompanyRecordController
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2114</x>
-      <y>469</y>
+      <x>2583</x>
+      <y>448</y>
       <w>35</w>
-      <h>63</h>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 Use</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1708</x>
+      <x>1771</x>
       <y>574</y>
-      <w>35</w>
+      <w>238</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 Use</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;40.0;320.0;40.0;320.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1799</x>
+      <x>2079</x>
       <y>574</y>
-      <w>308</w>
+      <w>91</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 Use</panel_attributes>
-    <additional_attributes>420.0;70.0;420.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;70.0;110.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1827</x>
+      <x>2107</x>
       <y>546</y>
-      <w>70</w>
+      <w>259</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 Use</panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2023</x>
-      <y>280</y>
+      <x>2352</x>
+      <y>147</y>
       <w>238</w>
       <h>63</h>
     </coordinates>
@@ -807,8 +811,8 @@ AuthenticatedCompanyRecordRepository
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2282</x>
-      <y>343</y>
+      <x>2604</x>
+      <y>245</y>
       <w>385</w>
       <h>63</h>
     </coordinates>
@@ -823,20 +827,20 @@ AuthenticatedCompanyRecordShowService
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2149</x>
-      <y>336</y>
-      <w>147</w>
-      <h>63</h>
+      <x>2478</x>
+      <y>203</y>
+      <w>140</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 Use</panel_attributes>
-    <additional_attributes>190.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>180.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2289</x>
-      <y>217</y>
+      <x>2793</x>
+      <y>70</y>
       <w>378</w>
       <h>70</h>
     </coordinates>
@@ -851,20 +855,20 @@ AuthenticatedCompanyRecordListService
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2149</x>
-      <y>238</y>
-      <w>154</w>
-      <h>56</h>
+      <x>2478</x>
+      <y>91</y>
+      <w>329</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 Use</panel_attributes>
-    <additional_attributes>200.0;20.0;10.0;20.0;10.0;60.0</additional_attributes>
+    <additional_attributes>450.0;20.0;10.0;20.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2373</x>
-      <y>448</y>
+      <x>2695</x>
+      <y>399</y>
       <w>224</w>
       <h>49</h>
     </coordinates>
@@ -877,14 +881,14 @@ AuthenticatedCompanyRecordController
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2478</x>
-      <y>399</y>
+      <x>2800</x>
+      <y>301</y>
       <w>35</w>
-      <h>63</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 Use</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -1116,6 +1120,206 @@ AuthenticatedRequestCreateService
 +create(r: Request&lt;acme.entities.requests.Request&gt;, e: acme.entities.requests.Request): void
 +authorise(r: Request&lt;acme.entities.requests.Request&gt; ): boolean
 +unbind(r: Request&lt;acme.entities.requests.Request&gt; request, e: acme.entities.requests.Request, m: Model): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1512</x>
+      <y>322</y>
+      <w>210</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Worker
+--
++ qualificationsRecord String {NotBlank}
++ skillsRecord: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1435</x>
+      <y>392</y>
+      <w>231</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Auditor
+--
++ firm: String {NotBlank}
++ responsibilityStatement: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1351</x>
+      <y>231</y>
+      <w>168</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1351</x>
+      <y>231</y>
+      <w>245</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;330.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1099</x>
+      <y>238</y>
+      <w>161</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Employer
+--
++ company: String {NotBlank}
++ sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1253</x>
+      <y>231</y>
+      <w>119</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>707</y>
+      <w>189</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+InvestorRecord
+--
++investor: String {NotBlank}
++sector: String {NotBlank}
++statement: String {NotBlank}
++starts : Integer {Range(min=1, max=5),NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2170</x>
+      <y>707</y>
+      <w>357</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+AuditRecord
+--
++title: String {NotBlank}
++body: String {NotBlank}
++status: boolean
++moment : Date {Temporal(TemporalType.TIMESTAMP), NotNull, Past}
++job: Job {NotNull, Valid, ManyToOne(optional = false)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1995</x>
+      <y>154</y>
+      <w>350</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Message
+--
++body: String {NotBlank}
++deadline: Date {NotNull, Temporal(TemporalType.TIMESTAMP)}
++title: String {NotBlank}
++tags: Collection&lt;String&gt;
++thread: Thread {NotNull, Valid, ManyToOne(optional = false)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2051</x>
+      <y>462</y>
+      <w>189</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Descriptor
+--
++description: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1988</x>
+      <y>322</y>
+      <w>420</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Job
+--
++reference: String {Column(unique = true), NotBlank, Length(min = 5, max = 10)}
++deadline: Date {NotNull, Temporal(TemporalType.TIMESTAMP)}
++salary: Money {NotNull, Valid}
++title: String {NotBlank}
++description: String {NotBlank}
++moreInfo: String {URL}
++status: boolean
++job: Job {NotNull, Valid, ManyToOne(optional = false)}
++descriptor: Descriptor {NotNull, Valid, ManyToOne(optional = false)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1995</x>
+      <y>238</y>
+      <w>350</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Duty
+--
++title: String {NotBlank}
++description: String {NotBlank}
++percentage: double {Range(min = 0, max = 1)}
++descriptor: Descriptor {NotNull, Valid, ManyToOne(optional = false)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2184</x>
+      <y>28</y>
+      <w>329</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Thread
+--
++title: String {NotBlank}
++moment: Date {NotNull, Temporal(TemporalType.TIMESTAMP)}
++user: Authenticated {NotNull, Valid, OneToMany()}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
