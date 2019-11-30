@@ -32,7 +32,6 @@ public class AuditRecord extends DomainEntity {
 
 	//false = draft
 	//true = published
-	@NotNull
 	private boolean				status;
 
 	@Temporal(TemporalType.TIMESTAMP)

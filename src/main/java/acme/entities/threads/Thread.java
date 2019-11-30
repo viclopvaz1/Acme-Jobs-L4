@@ -1,6 +1,7 @@
 
 package acme.entities.threads;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -21,20 +22,20 @@ import lombok.Setter;
 @Setter
 public class Thread extends DomainEntity {
 
-	private static final long	serialVersionUID	= 1L;
+	private static final long			serialVersionUID	= 1L;
 
 	@NotBlank
-	private String				title;
+	private String						title;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				moment;
+	private Date						moment;
 
 	//-------------------------------------------------
 
 	@NotNull
 	@Valid
 	@OneToMany()
-	private Authenticated		user;
+	private Collection<Authenticated>	users;
 
 }

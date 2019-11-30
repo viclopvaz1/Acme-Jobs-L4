@@ -1,7 +1,6 @@
 
 package acme.entities.messages;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -12,6 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import acme.entities.threads.Thread;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,7 +33,7 @@ public class Message extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	private Collection<String>	tags;
+	private String				tags;
 
 	//-------------------------------------------------
 
