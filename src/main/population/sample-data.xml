@@ -246,18 +246,6 @@
 		<property name="userAccount" ref="employer2UserAccount" />
 	</bean>
 
-	<bean name="duty1" class="acme.entities.duties.Duty">
-		<property name="title" value="Example1"/>
-		<property name="description" value="This is a 1st example"/>
-		<property name="percentage" value="0.5"/>
-		<property name="descriptor" ref="descriptor1" />
-	</bean>
-	
-	<bean name="descriptor1" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Example Descriptor" />
-		<property name="job" ref="job1" />
-	</bean>
-	
 	<bean name="job1" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP1-JOB1" />
 		<property name="title" value="Title 1" />
@@ -267,7 +255,20 @@
 		<property name="moreInfo" value="http://www.exampleone.com" />
 		<property name="status" value="true" />
 		<property name="employer" ref="employer1Employer" />
+		<property name="descriptor" ref="descriptor1" />
 	</bean>
+	
+	<bean name="descriptor1" class="acme.entities.descriptors.Descriptor">
+		<property name="description" value="Example Descriptor" />
+	</bean>
+	
+	<bean name="duty1" class="acme.entities.duties.Duty">
+		<property name="title" value="Example1"/>
+		<property name="description" value="This is a 1st example"/>
+		<property name="percentage" value="0.5"/>
+		<property name="descriptor" ref="descriptor1" />
+	</bean>
+	
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB1" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
@@ -305,6 +306,7 @@
 		<property name="moreInfo" value="http://www.examplesecond.com" />
 		<property name="status" value="false" />
 		<property name="employer" ref="employer2Employer" />
+		<property name="descriptor" ref="descriptor1" />
 	</bean>
 	
 	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
@@ -410,23 +412,10 @@
 		<property name="moment" value="2019/11/28 10:00"/>
 		<property name="users">
 			<list>
-				<ref bean="administratorUserAccount" />
+				<ref bean="employer1Authenticated" />
 			</list>
 		</property>
 	</bean>
 	
-	<bean id="message01" class="acme.entities.messages.Message">
-		<property name="body" value="Content for Example1"/>
-		<property name="deadline" value="2019/12/28 10:00"/>
-		<property name="title" value="Message1"/>
-		<property name="tags">
-			<list>
-				<value>Hello1</value>
-				<value>Hello2</value>
-				<value>Hello3</value>
-			</list>
-		</property>
-		<property name="thread" ref="thread01"/>
-	</bean>
 	
 </beans>

@@ -1,7 +1,6 @@
 
 package acme.entities.messages;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -34,7 +33,7 @@ public class Message extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	private Collection<String>	tags;
+	private String				tags;
 
 	//-------------------------------------------------
 
