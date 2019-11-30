@@ -12,6 +12,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import acme.entities.threads.Thread;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
