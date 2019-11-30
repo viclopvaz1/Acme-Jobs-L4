@@ -397,9 +397,9 @@
 			</list>
 		</property>
 	</bean>
-	<bean id = "audit-Record02" class = "acme.entities.auditRecords.AuditRecord">
+	<bean id = "audit-Record02" class = "acme.entities.auditrecords.AuditRecord">
 	<property name= "title" value= "auditRecord2"/>
-	<property name= "body" value= "Viva mi beti 2.0"/>
+	<property name= "body" value= "Viva mi beti 4.0"/>
 	<property name= "moment" value= "2019/11/28 10:00"/>
 	<property name= "status" value= "true"/>
 	<property name="job" ref="job2" />
