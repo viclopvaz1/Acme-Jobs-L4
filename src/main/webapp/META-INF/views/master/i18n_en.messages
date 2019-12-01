@@ -84,6 +84,11 @@ master.menu.employer = Employer
 master.menu.employer.list-mine-job = List Jobs
 master.menu.employer.list-mine-application = List Applications
 
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-mine-job = List Auditor Jobs
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer

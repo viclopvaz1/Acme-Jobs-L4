@@ -17,6 +17,10 @@
 
     alter table `audit_record` 
        drop 
+       foreign key `FKdcrrgv6rkfw2ruvdja56un4ji`;
+
+    alter table `audit_record` 
+       drop 
        foreign key `FKlbvbyimxf6pxvbhkdd4vfhlnd`;
 
     alter table `auditor` 
