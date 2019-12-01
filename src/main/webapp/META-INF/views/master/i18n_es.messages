@@ -98,7 +98,8 @@ master.menu.employer.list-mine-application = Lista de Solicitudes
 # master.menu.auditor ########################################################
 
 master.menu.auditor = Auditor
-master.menu.auditor.list-mine-job = List Auditor Jobs
+master.menu.auditor.list-mine-job = Lista de Trabajos de Auditores
+master.menu.auditor.list-no-mine-job = Lista de No Trabajos de Auditores
 
 # master.menu.user-account ####################################################
 

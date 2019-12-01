@@ -26,7 +26,6 @@ public class JobApplicationShowService implements AbstractShowService<Employer, 
 		int jobId;
 		Application application;
 		Job job;
-		//		Principal principal;
 
 		jobId = request.getModel().getInteger("id");
 		application = this.repository.findOneById(jobId);

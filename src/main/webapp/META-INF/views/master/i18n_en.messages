@@ -88,6 +88,7 @@ master.menu.employer.list-mine-application = List Applications
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-mine-job = List Auditor Jobs
+master.menu.auditor.list-no-mine-job = List Auditor No Jobs
 
 # master.menu.consumer ##########################################################
 
