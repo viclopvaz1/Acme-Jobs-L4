@@ -309,6 +309,18 @@
 		<property name="descriptor" ref="descriptor1" />
 	</bean>
 	
+	<bean name="job3" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMP3-JOB3" />
+		<property name="title" value="Title 3" />
+		<property name="deadline" value="2020/12/12 00:00" />
+		<property name="salary" value="€ 400" />
+		<property name="description" value="This is a 1st example" />
+		<property name="moreInfo" value="http://www.examplesecond.com" />
+		<property name="status" value="false" />
+		<property name="employer" ref="employer2Employer" />
+		<property name="descriptor" ref="descriptor1" />
+	</bean>
+	
 	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="worker1" />
 		<property name="password" value="worker1" />
@@ -367,6 +379,35 @@
 		<property name="userAccount" ref="worker2UserAccount" />
 	</bean>
 
+	<bean name="auditor1auditor" class="acme.entities.roles.Auditor">
+		<property name="firm" value="firm1" />
+		<property name="responsibilityStatement" value="responsibilityStatement1" />
+		<property name="userAccount" ref="auditor1UserAccount" />
+	</bean>
+
+	<bean name="auditor1Authenticathed" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor1UserAccount" />
+	</bean>
+	
+	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor1" />
+		<property name="password" value="auditor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="One" />
+				<property name="email" value="auditor1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor1auditor" />
+				<ref bean="auditor1Authenticathed" />
+			</list>
+		</property>
+	</bean>
+
 	<bean name="auditor2auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="firm1" />
 		<property name="responsibilityStatement" value="responsibilityStatement1" />
@@ -395,18 +436,31 @@
 			</list>
 		</property>
 	</bean>
-	<bean id = "audit-Record02" class = "acme.entities.auditrecords.AuditRecord">
+	<bean id = "audit-Record01" class = "acme.entities.auditrecords.AuditRecord">
 	<property name= "title" value= "auditRecord2"/>
 	<property name= "body" value= "Viva mi beti 4.0"/>
 	<property name= "moment" value= "2019/11/28 10:00"/>
 	<property name= "status" value= "true"/>
-	<property name="job" ref="job2" />
+	<property name="auditor" ref="auditor2auditor"/>
+	<property name="job" ref="job1" />
+	</bean>
 	
 	<bean id = "audit-Record02" class = "acme.entities.auditrecords.AuditRecord">
 		<property name= "title" value= "auditRecord2"/>
 		<property name= "body" value= "Viva mi beti 2.0"/>
 		<property name= "moment" value= "2019/11/28 10:00"/>
 		<property name= "status" value= "true"/>
+		<property name="auditor" ref="auditor1auditor"/>
+		<property name="job" ref="job2" />
+		
+	</bean>
+	
+	<bean id = "audit-Record03" class = "acme.entities.auditrecords.AuditRecord">
+		<property name= "title" value= "auditRecord3"/>
+		<property name= "body" value= "Viva mi beti 2.0"/>
+		<property name= "moment" value= "2019/11/28 10:00"/>
+		<property name= "status" value= "true"/>
+		<property name="auditor" ref="auditor1auditor"/>
 		<property name="job" ref="job2" />
 		
 	</bean>
