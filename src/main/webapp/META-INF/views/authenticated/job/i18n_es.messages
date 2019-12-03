@@ -11,4 +11,6 @@ authenticated.job.form.label.description = Descripcion
 authenticated.job.form.label.moreInfo = Más Información
 authenticated.job.form.label.status = Status
 authenticated.job.form.label.employer = Empleador
+
+authenticated.job.form.button.auditor = Records de Auditores
 authenticated.job.form.button.return = Volver

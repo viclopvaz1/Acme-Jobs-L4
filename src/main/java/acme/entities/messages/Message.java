@@ -3,6 +3,7 @@ package acme.entities.messages;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -23,6 +24,7 @@ public class Message extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
+	@Column(length = 1024)
 	@NotBlank
 	private String				body;
 

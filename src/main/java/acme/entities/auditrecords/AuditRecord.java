@@ -3,6 +3,7 @@ package acme.entities.auditrecords;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -28,6 +29,7 @@ public class AuditRecord extends DomainEntity {
 	@NotBlank
 	private String				title;
 
+	@Column(length = 1024)
 	@NotBlank
 	private String				body;
 

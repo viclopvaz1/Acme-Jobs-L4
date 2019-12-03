@@ -27,7 +27,7 @@
        `id` integer not null,
         `version` integer not null,
         `moment` datetime(6),
-        `qualifications` varchar(255),
+        `qualifications` varchar(1024),
         `reference_number` varchar(255),
         `skills` varchar(255),
         `status` varchar(255),
@@ -39,7 +39,7 @@
     create table `audit_record` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `moment` datetime(6),
         `status` bit not null,
         `title` varchar(255),
@@ -137,10 +137,10 @@
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
-        `description` varchar(255),
+        `description` varchar(1024),
         `percentage` double precision not null,
         `title` varchar(255),
-        `descriptor_id` integer not null,
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -167,14 +167,13 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `more_info` varchar(255),
         `reference` varchar(255),
         `salary_amount` double precision,
         `salary_currency` varchar(255),
         `status` bit not null,
         `title` varchar(255),
-        `descriptor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -182,7 +181,7 @@
     create table `message` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `deadline` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
@@ -357,19 +356,14 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        references `user_account` (`id`);
 
     alter table `duty` 
-       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
+       add constraint `FKs2uoxh4i5ya8ptyefae60iao1` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `employer` 
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `job` 
-       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 

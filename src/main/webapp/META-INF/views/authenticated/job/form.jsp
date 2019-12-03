@@ -16,5 +16,6 @@
 
 	<acme:form-textbox code="authenticated.job.form.label.status" path="status" />
 
+	<acme:form-submit code="authenticated.job.form.button.auditor" action="/authenticated/audit-record/list-mine?jobid=${id}"  method="get"/>
 	<acme:form-return code="authenticated.job.form.button.return" />
 </acme:form>
