@@ -179,6 +179,8 @@
 		<property name="monthExp" value="5"/>
 		<property name="yearExp" value="2020"/>
 		<property name="cvv" value="192"/>
+		<property name="sponsor" ref="sponsor2sponsor"/> 
+		
 	</bean>
 	
 	<bean id="noncomercialbanner01" class="acme.entities.noncomercialbanners.NonComercialBanner">
@@ -186,6 +188,7 @@
 		<property name="slogan" value="Algo más que palabras" />
 		<property name="targetUrl" value="https://www.mercadona.es" />
 		<property name="jingle" value="https://www.youtube.com/watch?v=ytT6355sDr4" />
+		<property name="sponsor" ref="sponsor2sponsor"/>
 	</bean>
 	
 		<bean name="employer1UserAccount" class="acme.framework.entities.UserAccount">
@@ -476,6 +479,36 @@
 			</list>
 		</property>
 	</bean>
+	
+	<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="sponsor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Two" />
+				<property name="email" value="sponsor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor2sponsor" />
+				<ref bean="sponsor2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor2sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisationName" value="sponsor 2, Inc." />
+		<property name="creditCard" value="4679489831381972" />
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+
+	<bean name="sponsor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+	
 	
 	
 </beans>

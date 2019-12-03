@@ -31,6 +31,10 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `comercial_banner` 
+       drop 
+       foreign key `FK541kwyr25g35v16xhw4k3ma9w`;
+
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
@@ -55,9 +59,17 @@
        drop 
        foreign key `FK28hjkn063wrsjuiyyf8sm3s2v`;
 
+    alter table `non_comercial_banner` 
+       drop 
+       foreign key `FK26pi62yqe29w5hdmmhfx0gcg9`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
     alter table `thread_authenticated` 
        drop 
@@ -116,6 +128,8 @@
     drop table if exists `request`;
 
     drop table if exists `shout`;
+
+    drop table if exists `sponsor`;
 
     drop table if exists `thread`;
 
