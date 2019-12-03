@@ -90,6 +90,11 @@ master.menu.auditor = Auditor
 master.menu.auditor.list-mine-job = List Auditor Jobs
 master.menu.auditor.list-no-mine-job = List Auditor No Jobs
 
+# master.menu.sponsor ########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.list-mine-comercial-banner = List Sponsor Comercial Banner
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
