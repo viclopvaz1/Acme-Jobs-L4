@@ -72,6 +72,7 @@
 			
 			<acme:menu-suboption code="master.menu.authenticated.list-job" action="/authenticated/job/list" />
 
+	<acme:menu-suboption code="master.menu.authenticated.list-mine-thread" action="/authenticated/thread/list-mine" />
 
 		</acme:menu-option>
 
