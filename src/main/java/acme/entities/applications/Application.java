@@ -41,6 +41,7 @@ public class Application extends DomainEntity {
 	@NotBlank
 	private String				skills;
 
+	@Column(length = 1024)
 	@NotBlank
 	private String				qualifications;
 

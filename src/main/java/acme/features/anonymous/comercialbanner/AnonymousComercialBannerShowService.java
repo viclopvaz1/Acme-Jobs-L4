@@ -30,7 +30,7 @@ public class AnonymousComercialBannerShowService implements AbstractShowService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetUrl", "creditCard");
+		request.unbind(entity, model, "picture", "slogan", "targetUrl", "creditCard", "sponsor.identity.fullName");
 	}
 
 	@Override

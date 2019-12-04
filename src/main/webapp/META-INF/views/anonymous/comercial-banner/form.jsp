@@ -20,6 +20,7 @@
 	<acme:form-textbox code="anonymous.comercial-banner.form.slogan" path="slogan"/>
 	<acme:form-textbox code="anonymous.comercial-banner.form.targetUrl" path="targetUrl"/>
 	<acme:form-url code="anonymous.comercial-banner.form.creditCard" path="creditCard"/>	
+	<acme:form-textbox code="anonymous.comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
 
   	<acme:form-return code="anonymous.comercial-banner.form.button.return"/>
 </acme:form>

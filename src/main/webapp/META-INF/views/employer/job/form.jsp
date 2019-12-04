@@ -24,7 +24,11 @@
 	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
-	
+	<acme:form-textbox code="employer.job.form.label.employer" path="employer.identity.fullName" />	
+	<acme:form-textbox code="employer.job.form.label.auditor" path="auditor.identity.fullName" />
 
+	
+	<acme:form-submit code="employer.job.form.button.audit-record" action="/authenticated/audit-record/list-mine?jobid=${id}"  method="get"/>
+	<acme:form-submit code="employer.job.form.button.duty" action="/authenticated/duty/list-mine?jobid=${id}"  method="get"/>
   	<acme:form-return code="employer.job.form.button.return"/>
 </acme:form>

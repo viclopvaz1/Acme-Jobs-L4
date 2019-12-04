@@ -4,7 +4,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-<acme:list-column code="anonymous.non-comercial-banner.label.picture" path="picture" width="20%"/>
-<acme:list-column code="anonymous.non-comercial-banner.label.slogan" path="slogan" width="20%"/>
+<acme:list-column code="administrator.non-comercial-banner.label.picture" path="picture" width="20%"/>
+<acme:list-column code="administrator.non-comercial-banner.label.slogan" path="slogan" width="20%"/>
 
 </acme:list>

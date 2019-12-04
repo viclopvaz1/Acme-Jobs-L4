@@ -1,5 +1,5 @@
 
-package acme.features.job.application;
+package acme.features.authenticated.thread;
 
 import javax.annotation.PostConstruct;
 
@@ -8,28 +8,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
-import acme.entities.applications.Application;
-import acme.entities.roles.Employer;
+import acme.entities.threads.Thread;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/employer/application/")
-public class JobApplicationController extends AbstractController<Employer, Application> {
+@RequestMapping("/authenticated/thread/")
+public class AuthenticatedThreadController extends AbstractController<Authenticated, Thread> {
 
 	@Autowired
-	JobApplicationListMineService	listMineService;
+	private AuthenticatedThreadListMineService	listMineService;
 
 	@Autowired
-	JobApplicationShowService		showService;
+	private AuthenticatedThreadShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
-
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
-
 }

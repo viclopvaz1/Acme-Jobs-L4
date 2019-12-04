@@ -13,6 +13,8 @@ worker.application.label.moment = Fecha:
 worker.application.label.status = Estado:
 worker.application.label.skills = Habilidades:
 worker.application.label.qualifications = Cualificaciones:
+worker.application.form.label.job: Trabajo:
+worker.application.form.label.worker = Trabajador:
 worker.application.form.button.return = Volver
 
 worker.application.list.label.status = Estado

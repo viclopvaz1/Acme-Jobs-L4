@@ -94,6 +94,7 @@ master.menu.auditor.list-no-mine-job = List Auditor No Jobs
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.list-mine-comercial-banner = List Sponsor Comercial Banner
+master.menu.sponsor.list-mine-non-comercial-banner = List Sponsor Non Comercial Banner
 
 # master.menu.consumer ##########################################################
 
@@ -119,6 +120,7 @@ master.menu.authenticated.list-company-record = List of Companies
 master.menu.authenticated.list-investor-record = List Investor Record
 master.menu.authenticated.list-challenge= List of challenges
 master.menu.authenticated.list-job = List of Jobs
+master.menu.authenticated.list-mine-thread = List of threads
 
 # master.footer ###############################################################
 

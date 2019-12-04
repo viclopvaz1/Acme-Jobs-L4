@@ -10,8 +10,9 @@
 
 anonymous.non-comercial-banner.form.picture = Imagen:
 anonymous.non-comercial-banner.form.slogan = Eslogan:
-anonymous.non-comercial-banner.form.targetUrl = Página Web
-anonymous.non-comercial-banner.form.jingle = Jingle
+anonymous.non-comercial-banner.form.targetUrl = Página Web:
+anonymous.non-comercial-banner.form.jingle = Jingle:
+anonymous.non-comercial-banner.form.sponsor = Patrocinador:
 
 anonymous.non-comercial-banner.label.picture = Imagen
 anonymous.non-comercial-banner.label.slogan = Eslogan
