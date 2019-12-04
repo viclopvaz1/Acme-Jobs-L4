@@ -54,6 +54,7 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.configuration = Spam List
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.estadistica = Statistics
+master.menu.administrator.estadistica-average = Average
 master.menu.administrator.announcement = Create Announcement
 master.menu.administrator.list-announcement = List of all Announcement
 master.menu.administrator.list-investor-record = List Investor Record

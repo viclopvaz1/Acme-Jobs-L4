@@ -31,4 +31,14 @@ public interface AdministratorEstadisticaRepository extends AbstractRepository {
 
 	@Query("select s.reward from Request s where datediff(current_date(), s.deadline)<0")
 	List<Money> findRequest();
+
+	@Query("select avg(select count(j) from Job j where j.employer.id = e.id) from Employer e")
+	Double averageNumberOfJobsPerEmployer();
+
+	@Query("select avg(select count(a) from Application a where a.worker.id = w.id) from Worker w")
+	Double averageNumberOfApplicationsPerWorker();
+
+	@Query("select avg(select count(a) from Application a where exists(select j from Job j where j.employer.id = e.id)) from Employer e")
+	Double averageNumberOfApplicationsPerEmployer();
+
 }

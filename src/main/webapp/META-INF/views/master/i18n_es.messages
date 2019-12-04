@@ -60,6 +60,7 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.configuration = Lista de Spam
 master.menu.administrator.dashboard = DashBoard
 master.menu.administrator.estadistica = Estadistica
+master.menu.administrator.estadistica-average = Medias
 master.menu.administrator.announcement = Crear Anuncio
 master.menu.administrator.list-announcement = Lista de todos los Anuncios
 master.menu.administrator.list-investor-record = Lista de Inversores
