@@ -12,7 +12,7 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EmployerShowService implements AbstractShowService<Employer, Job> {
+public class EmployerJobShowService implements AbstractShowService<Employer, Job> {
 
 	@Autowired
 	EmployerJobRepository repository;
@@ -44,7 +44,7 @@ public class EmployerShowService implements AbstractShowService<Employer, Job> {
 		assert model != null;
 
 		request.unbind(entity, model, "reference", "title", "deadline");
-		request.unbind(entity, model, "salary", "moreInfo", "description", "status");
+		request.unbind(entity, model, "salary", "moreInfo", "description", "status", "employer.identity.fullName", "auditor.identity.fullName");
 
 	}
 

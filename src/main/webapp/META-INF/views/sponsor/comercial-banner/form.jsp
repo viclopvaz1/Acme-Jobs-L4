@@ -23,6 +23,7 @@
 	<acme:form-textbox code="sponsor.comercial-banner.form.monthExp" path="monthExp"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.yearExp" path="yearExp"/>
 	<acme:form-textbox code="sponsor.comercial-banner.form.cvv" path="cvv"/>
+	<acme:form-textbox code="sponsor.comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
 	
 
 	

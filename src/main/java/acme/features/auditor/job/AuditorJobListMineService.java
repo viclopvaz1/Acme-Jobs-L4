@@ -2,12 +2,10 @@
 package acme.features.auditor.job;
 
 import java.util.Collection;
-import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.auditrecords.AuditRecord;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
@@ -43,16 +41,16 @@ public class AuditorJobListMineService implements AbstractListService<Auditor, J
 	public Collection<Job> findMany(final Request<Job> request) {
 		assert request != null;
 
-		Collection<Job> result = new HashSet<>();
-		Collection<AuditRecord> auditRecord;
+		Collection<Job> result;
+		//		Collection<AuditRecord> auditRecord;
 		Principal principal;
 
 		principal = request.getPrincipal();
-		auditRecord = this.repository.findManyByAuditor(principal.getActiveRoleId());
-		for (AuditRecord ar : auditRecord) {
-			Job job = ar.getJob();
-			result.add(job);
-		}
+		result = this.repository.findManyByAuditorId(principal.getActiveRoleId());
+		//		for (AuditRecord ar : auditRecord) {
+		//			Job job = ar.getJob();
+		//			result.add(job);
+		//		}
 
 		return result;
 	}

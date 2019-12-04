@@ -200,7 +200,7 @@
 		<property name="slogan" value="Algo más que palabras" />
 		<property name="targetUrl" value="https://www.mercadona.es" />
 		<property name="jingle" value="https://www.youtube.com/watch?v=ytT6355sDr4" />
-		<property name="sponsor" ref="sponsor2sponsor"/>
+		<property name="sponsor" ref="sponsor1sponsor"/>
 	</bean>
 	
 		<bean name="employer1UserAccount" class="acme.framework.entities.UserAccount">
@@ -270,22 +270,19 @@
 		<property name="moreInfo" value="http://www.exampleone.com" />
 		<property name="status" value="true" />
 		<property name="employer" ref="employer1Employer" />
-		<property name="descriptor" ref="descriptor1" />
+		<property name="auditor" ref="auditor1auditor" />
 	</bean>
 	
-	<bean name="descriptor1" class="acme.entities.descriptors.Descriptor">
-		<property name="description" value="Example Descriptor" />
-	</bean>
 	
 	<bean name="duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Example1"/>
 		<property name="description" value="This is a 1st example"/>
 		<property name="percentage" value="0.5"/>
-		<property name="descriptor" ref="descriptor1" />
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<bean name="application1" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="EMP1-JOB1" />
+		<property name="referenceNumber" value="EMP1-JOB1:W101" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
 		<property name="status" value="accepted" />
 		<property name="skills" value="Mu bueno" />
@@ -294,7 +291,7 @@
 		<property name="worker" ref="worker1Worker" />
 	</bean>
 	<bean name="application2" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="EMP1-JOB13" />
+		<property name="referenceNumber" value="EMP1-JOB1:W102" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
 		<property name="status" value="rejected" />
 		<property name="skills" value="Mu bueno" />
@@ -303,7 +300,7 @@
 		<property name="worker" ref="worker1Worker" />
 	</bean>
 	<bean name="application3" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="EMP1-JOB134" />
+		<property name="referenceNumber" value="EMP1-JOB2:W201" />
 		<property name= "moment" value= "2019/11/18 10:00"/>
 		<property name="status" value="rejected" />
 		<property name="skills" value="Mu bueno" />
@@ -319,9 +316,9 @@
 		<property name="salary" value="€ 400" />
 		<property name="description" value="This is a 1st example" />
 		<property name="moreInfo" value="http://www.examplesecond.com" />
-		<property name="status" value="false" />
-		<property name="employer" ref="employer2Employer" />
-		<property name="descriptor" ref="descriptor1" />
+		<property name="status" value="true" />
+		<property name="employer" ref="employer1Employer" />
+		<property name="auditor" ref="auditor2auditor" />
 	</bean>
 	
 	<bean name="job3" class="acme.entities.jobs.Job">
@@ -331,9 +328,9 @@
 		<property name="salary" value="€ 400" />
 		<property name="description" value="This is a 1st example" />
 		<property name="moreInfo" value="http://www.examplesecond.com" />
-		<property name="status" value="false" />
+		<property name="status" value="true" />
 		<property name="employer" ref="employer2Employer" />
-		<property name="descriptor" ref="descriptor1" />
+		<property name="auditor" ref="auditor2auditor" />
 	</bean>
 	
 	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
@@ -440,7 +437,7 @@
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Auditor" />
-				<property name="surname" value="One" />
+				<property name="surname" value="Two" />
 				<property name="email" value="auditor1@acme.com" />
 			</bean>
 		</property>
@@ -452,11 +449,11 @@
 		</property>
 	</bean>
 	<bean id = "audit-Record01" class = "acme.entities.auditrecords.AuditRecord">
-	<property name= "title" value= "auditRecord2"/>
+	<property name= "title" value= "auditRecord1"/>
 	<property name= "body" value= "Viva mi beti 4.0"/>
 	<property name= "moment" value= "2019/11/28 10:00"/>
 	<property name= "status" value= "true"/>
-	<property name="auditor" ref="auditor2auditor"/>
+	<property name="auditor" ref="auditor1auditor"/>
 	<property name="job" ref="job1" />
 	</bean>
 	
@@ -466,7 +463,7 @@
 		<property name= "moment" value= "2019/11/28 10:00"/>
 		<property name= "status" value= "true"/>
 		<property name="auditor" ref="auditor1auditor"/>
-		<property name="job" ref="job2" />
+		<property name="job" ref="job1" />
 		
 	</bean>
 	
@@ -475,22 +472,68 @@
 		<property name= "body" value= "Viva mi beti 2.0"/>
 		<property name= "moment" value= "2019/11/28 10:00"/>
 		<property name= "status" value= "true"/>
-		<property name="auditor" ref="auditor1auditor"/>
+		<property name="auditor" ref="auditor2auditor"/>
 		<property name="job" ref="job2" />
 		
 	</bean>
 	
-	
+	<bean name="message1" class="acme.entities.messages.Message">
+		<property name="title" value="Title 1" />
+		<property name="moment" value="2028/12/10 04:00" />
+		<property name="tags" value="Scrum" />
+		<property name="body" value="what is this problem" />
+		<property name="user" ref="worker1Authenticathed" />
+	</bean>
+
+	<bean name="message2" class="acme.entities.messages.Message">
+		<property name="title" value="Title 2" />
+		<property name="moment" value="2034/12/23 01:00" />
+		<property name="tags" value="design,agile" />
+		<property name="body" value="People with experience" />
+		<property name="user" ref="worker1Authenticathed" />
+	</bean>
+
+	<bean name="message3" class="acme.entities.messages.Message">
+		<property name="title" value="Title 3" />
+		<property name="moment" value="2028/11/21 01:00" />
+		<property name="tags">
+			<null />
+		</property>
+		<property name="body" value="People fresh" />
+		<property name="user" ref="worker1Authenticathed" />
+	</bean>
+
+	<bean name="message4" class="acme.entities.messages.Message">
+		<property name="title" value="Title 4" />
+		<property name="moment" value="2019/6/21 11:00" />
+		<property name="tags">
+			<null />
+		</property>
+		<property name="body" value="This is a difficult job" />
+		<property name="user" ref="employer1Authenticated" />
+	</bean>
 	
 	<bean id="thread01" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread01"/>
-		<property name="moment" value="2019/11/28 10:00"/>
-		<property name="users">
+		<property name="moment" value="2030/12/11 10:00"/>
+		<property name="messages">
 			<list>
-				<ref bean="employer1Authenticated" />
+				<ref bean="message4" />
 			</list>
 		</property>
 	</bean>
+	
+	<bean name="thread02" class="acme.entities.threads.Thread">
+		<property name="title" value="Sample thread 2" />
+		<property name="moment" value="2030/12/11 23:59" />
+		<property name="messages">
+			<list>
+				<ref bean="message1" />
+				<ref bean="message2" />
+				<ref bean="message3" />
+			</list>
+		</property>
+		</bean>
 	
 	<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="sponsor2" />

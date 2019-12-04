@@ -10,8 +10,9 @@
 
 anonymous.comercial-banner.form.picture = Imagen:
 anonymous.comercial-banner.form.slogan = Eslogan:
-anonymous.comercial-banner.form.targetUrl = Página Web
-anonymous.comercial-banner.form.creditCard = Tarjeta de Crédito
+anonymous.comercial-banner.form.targetUrl = Página Web:
+anonymous.comercial-banner.form.creditCard = Tarjeta de Crédito:
+anonymous.comercial-banner.form.sponsor = Patrocinador:
 
 anonymous.comercial-banner.label.picture = Imagen
 anonymous.comercial-banner.label.slogan = Eslogan

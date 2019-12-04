@@ -1,5 +1,5 @@
 
-package acme.features.job.application;
+package acme.features.employer.application;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -10,20 +10,16 @@ import org.springframework.stereotype.Service;
 import acme.entities.applications.Application;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
-import acme.features.employer.job.EmployerJobRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class JobApplicationListMineService implements AbstractListService<Employer, Application> {
+public class EmployerApplicationListMineService implements AbstractListService<Employer, Application> {
 
 	@Autowired
-	JobApplicationRepository	repository;
-
-	@Autowired
-	EmployerJobRepository		jobRepository;
+	EmployerApplicationRepository repository;
 
 
 	@Override
@@ -47,14 +43,26 @@ public class JobApplicationListMineService implements AbstractListService<Employ
 	public Collection<Application> findMany(final Request<Application> request) {
 		assert request != null;
 
+		//		Collection<Application> result = new HashSet<>();
+		//		Principal principal;
+		//		Collection<Application> application;
+		//		Collection<Job> jobs;
+		//
+		//		principal = request.getPrincipal();
+		//		jobs = this.jobRepository.findManyByEmployerId(principal.getActiveRoleId());
+		//		for (Job j : jobs) {
+		//			application = this.repository.findManyByJobId(j.getId());
+		//			result.addAll(application);
+		//		}
+
 		Collection<Application> result = new HashSet<>();
-		Principal principal;
 		Collection<Application> application;
-		Collection<Job> jobs;
+		Collection<Job> job;
+		Principal principal;
 
 		principal = request.getPrincipal();
-		jobs = this.jobRepository.findManyByEmployerId(principal.getActiveRoleId());
-		for (Job j : jobs) {
+		job = this.repository.findManyByEmployerId(principal.getActiveRoleId());
+		for (Job j : job) {
 			application = this.repository.findManyByJobId(j.getId());
 			result.addAll(application);
 		}

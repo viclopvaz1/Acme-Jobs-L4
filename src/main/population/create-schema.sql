@@ -27,7 +27,7 @@
        `id` integer not null,
         `version` integer not null,
         `moment` datetime(6),
-        `qualifications` varchar(255),
+        `qualifications` varchar(1024),
         `reference_number` varchar(255),
         `skills` varchar(255),
         `status` varchar(255),
@@ -39,7 +39,7 @@
     create table `audit_record` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `moment` datetime(6),
         `status` bit not null,
         `title` varchar(255),
@@ -138,10 +138,10 @@
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
-        `description` varchar(255),
+        `description` varchar(1024),
         `percentage` double precision not null,
         `title` varchar(255),
-        `descriptor_id` integer not null,
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -175,7 +175,7 @@
         `salary_currency` varchar(255),
         `status` bit not null,
         `title` varchar(255),
-        `descriptor_id` integer not null,
+        `auditor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -184,10 +184,10 @@
        `id` integer not null,
         `version` integer not null,
         `body` varchar(255),
-        `deadline` datetime(6),
+        `moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
-        `thread_id` integer not null,
+        `user_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -265,9 +265,9 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `thread_authenticated` (
+    create table `thread_message` (
        `thread_id` integer not null,
-        `users_id` integer not null
+        `messages_id` integer not null
     ) engine=InnoDB;
 
     create table `user_account` (
@@ -316,8 +316,8 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
 
-    alter table `thread_authenticated` 
-       add constraint UK_t69jud9gwiunbu3cx39uycwxb unique (`users_id`);
+    alter table `thread_message` 
+       add constraint UK_3jtjeexb82n6qyr77gcoqr4ck unique (`messages_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -373,9 +373,9 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        references `user_account` (`id`);
 
     alter table `duty` 
-       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
+       add constraint `FKs2uoxh4i5ya8ptyefae60iao1` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `employer` 
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
@@ -383,9 +383,9 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        references `user_account` (`id`);
 
     alter table `job` 
-       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
+       add constraint `FK15emyu82ye1j9lfl1wpo1i1ee` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
@@ -393,9 +393,9 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        references `employer` (`id`);
 
     alter table `message` 
-       add constraint `FK28hjkn063wrsjuiyyf8sm3s2v` 
-       foreign key (`thread_id`) 
-       references `thread` (`id`);
+       add constraint `FKik4epe9dp5q6uenarfyia7xin` 
+       foreign key (`user_id`) 
+       references `authenticated` (`id`);
 
     alter table `non_comercial_banner` 
        add constraint `FK26pi62yqe29w5hdmmhfx0gcg9` 
@@ -412,13 +412,13 @@ create index IDX9hmmho2f3h0l23kcwosgfodbf on `request` (`moment`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `thread_authenticated` 
-       add constraint `FKkuamwlt147dsxim98bfhh4dsr` 
-       foreign key (`users_id`) 
-       references `authenticated` (`id`);
+    alter table `thread_message` 
+       add constraint `FKrjegm8cujrxgbce9n1b78xuyo` 
+       foreign key (`messages_id`) 
+       references `message` (`id`);
 
-    alter table `thread_authenticated` 
-       add constraint `FKjsja3s5mr66x5nxm9dd8kut3r` 
+    alter table `thread_message` 
+       add constraint `FKgjodhp3io8v829t92y1tdtb7u` 
        foreign key (`thread_id`) 
        references `thread` (`id`);
 

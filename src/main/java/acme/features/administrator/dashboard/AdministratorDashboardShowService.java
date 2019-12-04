@@ -32,7 +32,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "numberOfCompaniesGroupedBySector", "numberOfInvestorsGroupedBySector");
+		request.unbind(entity, model, "numberOfCompaniesGroupedBySector", "numberOfInvestorsGroupedBySector", "ratioOfJobsGroupedByStatus", "ratioOfApplicationsGroupedByStatus", "TotalJobs", "TotalApplications");
 
 	}
 
@@ -42,10 +42,18 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		Collection<Object[]> numberOfCompaniesGroupedBySector = this.repository.findBySector();
 		Collection<Object[]> numberOfInvestorsGroupedBySector = this.repository.findBySector2();
+		Collection<Object[]> gbs = this.repository.findByStatus();
+		Collection<Object[]> gbs2 = this.repository.findBySector2();
+		Double total = this.repository.findTotalJobs();
+		Double totalap = this.repository.findTotalApplication();
 
 		Dashboard result = new Dashboard();
 		result.setNumberOfCompaniesGroupedBySector(numberOfCompaniesGroupedBySector);
 		result.setNumberOfInvestorsGroupedBySector(numberOfInvestorsGroupedBySector);
+		result.setRatioOfJobsGroupedByStatus(gbs);
+		result.setRatioOfApplicationsGroupedByStatus(gbs2);
+		result.setTotalJobs(total);
+		result.setTotalApplications(totalap);
 
 		return result;
 

@@ -15,12 +15,10 @@ sponsor.comercial-banner.form.creditCard = Credit Card
 sponsor.comercial-banner.form.monthExp = Month Expire
 sponsor.comercial-banner.form.yearExp = Year Expire
 sponsor.comercial-banner.form.cvv = CVV
+sponsor.comercial-banner.form.sponsor = Sponsor:
 
 sponsor.comercial-banner.label.picture = Picture
 sponsor.comercial-banner.label.slogan = Slogan
 
-sponsor.comercial-banner.form.button.create = Create
-sponsor.comercial-banner.form.button.update = Update
-sponsor.comercial-banner.form.button.delete = Delete
 sponsor.comercial-banner.form.button.return = Return
 

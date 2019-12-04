@@ -1,5 +1,5 @@
 
-package acme.features.job.application;
+package acme.features.employer.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +12,10 @@ import acme.framework.components.Request;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class JobApplicationShowService implements AbstractShowService<Employer, Application> {
+public class EmployerApplicationShowService implements AbstractShowService<Employer, Application> {
 
 	@Autowired
-	JobApplicationRepository repository;
+	EmployerApplicationRepository repository;
 
 
 	@Override
@@ -42,7 +42,7 @@ public class JobApplicationShowService implements AbstractShowService<Employer, 
 		assert model != null;
 
 		request.unbind(entity, model, "referenceNumber", "moment");
-		request.unbind(entity, model, "status", "skills", "qualifications");
+		request.unbind(entity, model, "status", "skills", "qualifications", "job.reference", "worker.identity.fullName");
 
 	}
 

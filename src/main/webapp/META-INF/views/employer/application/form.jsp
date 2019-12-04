@@ -22,6 +22,8 @@
 	<acme:form-moment code="employer.application.form.label.status" path="status"/>
 	<acme:form-money code="employer.application.form.label.skills" path="skills"/>
 	<acme:form-url code="employer.application.form.label.qualifications" path="qualifications"/>
+	<acme:form-textbox code="employer.application.form.label.job" path="job.reference"/>
+	<acme:form-textbox code="employer.application.form.label.worker" path="worker.identity.fullName"/>
 	
 
   	<acme:form-return code="employer.application.form.button.return"/>

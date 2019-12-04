@@ -16,4 +16,12 @@ public class Dashboard implements Serializable {
 	Collection<Object[]>		numberOfCompaniesGroupedBySector;
 
 	Collection<Object[]>		numberOfInvestorsGroupedBySector;
+
+	Collection<Object[]>		ratioOfJobsGroupedByStatus;
+
+	Collection<Object[]>		ratioOfApplicationsGroupedByStatus;
+
+	Double						TotalJobs;
+
+	Double						TotalApplications;
 }

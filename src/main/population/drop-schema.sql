@@ -41,7 +41,7 @@
 
     alter table `duty` 
        drop 
-       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
+       foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
 
     alter table `employer` 
        drop 
@@ -49,7 +49,7 @@
 
     alter table `job` 
        drop 
-       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
+       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
 
     alter table `job` 
        drop 
@@ -57,7 +57,7 @@
 
     alter table `message` 
        drop 
-       foreign key `FK28hjkn063wrsjuiyyf8sm3s2v`;
+       foreign key `FKik4epe9dp5q6uenarfyia7xin`;
 
     alter table `non_comercial_banner` 
        drop 
@@ -71,13 +71,13 @@
        drop 
        foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
-    alter table `thread_authenticated` 
+    alter table `thread_message` 
        drop 
-       foreign key `FKkuamwlt147dsxim98bfhh4dsr`;
+       foreign key `FKrjegm8cujrxgbce9n1b78xuyo`;
 
-    alter table `thread_authenticated` 
+    alter table `thread_message` 
        drop 
-       foreign key `FKjsja3s5mr66x5nxm9dd8kut3r`;
+       foreign key `FKgjodhp3io8v829t92y1tdtb7u`;
 
     alter table `worker` 
        drop 
@@ -133,7 +133,7 @@
 
     drop table if exists `thread`;
 
-    drop table if exists `thread_authenticated`;
+    drop table if exists `thread_message`;
 
     drop table if exists `user_account`;
 

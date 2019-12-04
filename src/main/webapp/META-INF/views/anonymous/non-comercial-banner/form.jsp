@@ -18,8 +18,9 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="anonymous.non-comercial-banner.form.picture" path="picture"/>
 	<acme:form-textbox code="anonymous.non-comercial-banner.form.slogan" path="slogan"/>
-	<acme:form-textbox code="anonymous.non-comercial-banner.form.targetUrl" path="targetUrl"/>
+	<acme:form-url code="anonymous.non-comercial-banner.form.targetUrl" path="targetUrl"/>
 	<acme:form-url code="anonymous.non-comercial-banner.form.jingle" path="jingle"/>	
+	<acme:form-textbox code="anonymous.non-comercial-banner.form.sponsor" path="sponsor.identity.fullName"/>
 
   	<acme:form-return code="anonymous.non-comercial-banner.form.button.return"/>
 </acme:form>

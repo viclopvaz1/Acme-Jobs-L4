@@ -10,8 +10,9 @@
 
 anonymous.comercial-banner.form.picture = Picture:
 anonymous.comercial-banner.form.slogan = Slogan:
-anonymous.comercial-banner.form.targetUrl = Target URL
-anonymous.comercial-banner.form.creditCard = Credit Card
+anonymous.comercial-banner.form.targetUrl = Target URL:
+anonymous.comercial-banner.form.creditCard = Credit Card:
+anonymous.comercial-banner.form.sponsor = Sponsor:
 
 anonymous.comercial-banner.label.picture = Picture
 anonymous.comercial-banner.label.slogan = Slogan

@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import acme.entities.threads.Thread;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,7 +28,7 @@ public class Message extends DomainEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				deadline;
+	private Date				moment;
 
 	@NotBlank
 	private String				title;
@@ -40,6 +40,6 @@ public class Message extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Thread				thread;
+	private Authenticated		user;
 
 }

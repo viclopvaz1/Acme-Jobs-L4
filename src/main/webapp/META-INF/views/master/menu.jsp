@@ -72,6 +72,7 @@
 			
 			<acme:menu-suboption code="master.menu.authenticated.list-job" action="/authenticated/job/list" />
 
+			<acme:menu-suboption code="master.menu.authenticated.list-mine-thread" action="/authenticated/thread/list-mine" />
 
 		</acme:menu-option>
 
@@ -142,7 +143,7 @@
 		
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
 			<acme:menu-suboption code="master.menu.sponsor.list-mine-comercial-banner" action="/sponsor/comercial-banner/list-mine"/>
-				<acme:menu-separator />		
+			<acme:menu-suboption code="master.menu.sponsor.list-mine-non-comercial-banner" action="/sponsor/non-comercial-banner/list-mine"/>
 		</acme:menu-option>
 		
 		

@@ -18,7 +18,7 @@ import acme.framework.controllers.AbstractController;
 public class EmployerJobController extends AbstractController<Employer, Job> {
 
 	@Autowired
-	private EmployerShowService			showService;
+	private EmployerJobShowService			showService;
 
 	@Autowired
 	private EmployerJobListMineService	listMineService;

@@ -17,7 +17,11 @@ auditor.job.form.label.title = Title:
 auditor.job.form.label.deadline = Deadline: 
 auditor.job.form.label.salary = Salary: 
 auditor.job.form.label.description = Description: 
-auditor.job.form.label.moreInfo = More Info: 
+auditor.job.form.label.moreInfo = More Info:
+auditor.job.form.label.employer = Employer:
+auditor.job.form.label.auditor = Auditor:
+auditor.job.form.button.audit-record = Audits Records
+auditor.job.form.button.duty = Duties 
 auditor.job.form.button.return = Return
 
 auditor.job.form.placeolder.reference = Recomended the format: EMP1-JOB1
